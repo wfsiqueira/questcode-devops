@@ -1,0 +1,20 @@
+---
+#### CRIAR A NAMESPACE STAGING
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: staging
+
+---
+#### CRIAR A NAMESPACE PRODUCTION
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: prod
+  
+---
+#### CRIAR A NAMESPACE DEVOPS
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: devops

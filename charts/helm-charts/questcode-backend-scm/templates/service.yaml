@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "questcode-backend-scm.fullname" . }}
+  labels:
+{{ include "questcode-backend-scm.labels" . | indent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.port }}
+      nodePort: {{ .Values.service.nodePort }}
+      protocol: TCP
+      name: servico
+  selector:
+    app.kubernetes.io/name: {{ include "questcode-backend-scm.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}

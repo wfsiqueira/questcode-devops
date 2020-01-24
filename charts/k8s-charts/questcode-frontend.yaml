@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: questcode-frontend
+  namespace: staging
+  labels:
+    app: questcode-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: questcode-frontend
+  template:
+    metadata:
+      labels:
+        app: questcode-frontend
+    spec:
+      containers:
+      - name: questcode-frontend
+        image: wsiqueira/frontend:1.1
+        ports:
+        - containerPort: 80

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: questcode-backend-user
+  namespace: staging
+spec:
+  type: NodePort
+  selector:
+    app: questcode-backend-user
+  ports:
+    - protocol: TCP
+      port: 3020
+      targetPort: 3020
+      nodePort: 30020
