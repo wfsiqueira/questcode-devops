@@ -10,9 +10,9 @@ nameOverride: ""
 fullnameOverride: ""
 
 service:
-  type: NodePort
+  type: ClusterIP
   port: 3020
-  nodePort: 30020
+  nodePort: ""
 
 ingress:
   enabled: false
