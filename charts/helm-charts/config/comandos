@@ -1,0 +1,4 @@
+#### HELM JENKINS
+helm install --name jenkins-master-node --set persistence.existingClaim=jenkins --set master.serviceType=NodePort --set master.nodePort=30808 --namespace devops stable/jenkins
+
+
